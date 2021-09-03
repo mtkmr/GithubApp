@@ -1,16 +1,38 @@
 PODS:
   - IQKeyboardManagerSwift (6.5.6)
+  - PINCache (3.0.3):
+    - PINCache/Arc-exception-safe (= 3.0.3)
+    - PINCache/Core (= 3.0.3)
+  - PINCache/Arc-exception-safe (3.0.3):
+    - PINCache/Core
+  - PINCache/Core (3.0.3):
+    - PINOperation (~> 1.2.1)
+  - PINOperation (1.2.1)
+  - PINRemoteImage (3.0.3):
+    - PINRemoteImage/PINCache (= 3.0.3)
+  - PINRemoteImage/Core (3.0.3):
+    - PINOperation
+  - PINRemoteImage/PINCache (3.0.3):
+    - PINCache (~> 3.0.3)
+    - PINRemoteImage/Core
 
 DEPENDENCIES:
   - IQKeyboardManagerSwift
+  - PINRemoteImage
 
 SPEC REPOS:
   trunk:
     - IQKeyboardManagerSwift
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
 
 SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  PINCache: 7a8fc1a691173d21dbddbf86cd515de6efa55086
+  PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
+  PINRemoteImage: f1295b29f8c5e640e25335a1b2bd9d805171bd01
 
-PODFILE CHECKSUM: 8489d34749abde0e4a2815f145f09d62c0cd2a04
+PODFILE CHECKSUM: 2a1fb707bbe52d3a4fe368dfeaaf2081b825bb69
 
 COCOAPODS: 1.10.0

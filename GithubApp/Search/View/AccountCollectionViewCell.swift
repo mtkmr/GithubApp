@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 final class AccountCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var iconImageView: UIImageView! {
+        didSet {
+            iconImageView.pin_updateWithProgress = true
+        }
+    }
     
     override func prepareForReuse() {
         super.prepareForReuse()
@@ -25,7 +30,9 @@ final class AccountCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(item: Item) {
-        iconImageView.image = UIImage(url: item.owner.avatar)
+        guard let imageUrl = URL(string: item.owner.avatar) else { return }
+        PINRemoteImageManager.shared().cache.removeObject(forKey: PINRemoteImageManager.shared().cacheKey(for: imageUrl, processorKey: nil))
+        iconImageView.pin_setImage(from: imageUrl, placeholderImage: UIImage(named: "DefImage"))
     }
 
 }

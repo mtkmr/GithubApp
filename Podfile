@@ -6,5 +6,6 @@ target 'GithubApp' do
 
   # Pods for GithubApp
   pod 'IQKeyboardManagerSwift' 
+  pod 'PINRemoteImage'
 
 end
