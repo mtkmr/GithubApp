@@ -11,9 +11,11 @@ A simple app to fetch data from the GitHub REST API.
 
 # Requirement
 - [IQKeyboardManagerSwift](https://cocoapods.org/pods/IQKeyboardManagerSwift)
+- [PINRemoteImage](https://github.com/pinterest/PINRemoteImage)
 
 # Installation
 Using Cocoa Pods
 ```
 pod 'IQKeyboardManagerSwift'
+pod 'PINRemoteImage'
 ```
